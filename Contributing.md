@@ -6,7 +6,7 @@ I love pull requests. And following this simple guidelines will make your pull r
 ## Submitting pull requests
 
 1. Create a new branch, please don’t work in master directly.
-2. Add failing tests (if there’re any tests in project) for the change you want to make. Run tests (usually `grunt` or `npm test`) to see the tests fail.
+2. Add failing tests (if there’re any tests in project) for the change you want to make. Run tests (see below) to see the tests fail.
 3. Hack on.
 4. Run tests to see if the tests pass. Repeat steps 2–4 until done.
 5. Update the documentation to reflect any changes.
@@ -14,6 +14,8 @@ I love pull requests. And following this simple guidelines will make your pull r
 
 
 ## JavaScript code style
+
+See [JSHint](.jshintrc) and [JSCS](.jscs.json) config files for more details.
 
 - Tab indentation.
 - Single-quotes.
@@ -55,17 +57,17 @@ function foo(bar, fum) {
 - Don’t commit generated files: compiled from Stylus CSS, minified JavaScript, etc.
 - Don’t change version number and changelog.
 - Install [EditorConfig](http://editorconfig.org/) plugin for your code editor.
-- If code you change uses different style (probably it’s an old code) use file’s style instead of style described on this page.
 - Feel free to [ask me](http://sapegin.me/contacts) anything you need.
 
 
-## How to build / test
+## Building and running tests
 
 `cd` to `src` folder first.
 
 Install dependencies:
 
 ```bash
+npm install grunt-cli -g
 npm install
 ```
 
@@ -75,7 +77,7 @@ Hack on:
 grunt watch
 ```
 
-Build:
+Build / run tests:
 
 ```bash
 grunt
